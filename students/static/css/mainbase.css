@@ -1,0 +1,41 @@
+
+.extra {
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      
+    );
+    /* background-size: 200% 100%; */
+    /* background-position: -100%; */
+    /* display: inline-block; */
+    /* padding: 5px 0; */
+    position: relative;
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .extra:before{
+    content: '';
+    background: #b1b2ae;
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .extra:hover {
+   background-position: 0;
+  }
+  
+  .extra:hover::before{
+    width: 100%;
+  }
+  
+  /* Presentational Styles */
+ 
+

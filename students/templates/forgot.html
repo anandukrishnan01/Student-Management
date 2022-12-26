@@ -1,0 +1,31 @@
+
+{% extends 'mainbase.html' %}
+{% block title %}
+Home{% endblock %}
+{% block content %}
+{% load static %}
+        <link rel="stylesheet" href="{% static '/css/forgott.css'%}">
+        <div class="outer">
+            <div class="login-box">
+                <h2>Forgot password</h2>
+                <hr>
+                <div class="px" style="margin-top: -10%;">
+                    <p id="text"></p>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div>{% for message in messages %}
+                        <h3>{{message}}</h3>{% endfor %}</div>
+                    <label for="">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" onchange="validemail()">
+                    <label for="">Password</label>
+                    <input type="password" id="pass1" name="pass1" placeholder="Enter password" onchange="validpassword()">
+                    <label for=""> Re-enter Password</label>
+                    <input type="password" id="pass2"  name="pass2" placeholder="Enter password" onchange="validpassconform()">
+                    <input type="submit" name="" id="signup"  style="background-color: #49c1a2; width: 2454x;height: 30px; margin-top: 20px; border: none; color: white; font-size: 18px;">
+                </form>
+            </div>
+        </div>
+        <script src="{% static 'js/forgot.js' %}"></script>
+        {% endblock %}

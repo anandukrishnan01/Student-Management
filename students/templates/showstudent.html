@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}
+show students{% endblock %}
+{% block content %}
+{% load static %}
+<div style="margin-left: 10%; margin-top: 2%; margin-bottom: 5%;">
+    <h1 style="color: tomato;">Student Details</h1>
+    <hr style="border: .5px solid black; margin-right: 60%; ">
+</div>
+<table class="table table-bordered w-75" style="margin-left: 10%; margin-bottom:7% ;">
+    <thead style="text-align: center; background-color: rgb(203, 248, 248);">
+        <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>phone number</th>
+            <th>address</th>
+            <th>place</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    {% for i in forms %}
+    <tbody style="text-align: center;">
+        <tr>
+            <td>{{i.student_name}}</td>
+            <td>{{i.student_email}}</td>
+            <td>{{i.student_phone}}</td>
+            <td>{{i.student_address}}</td>
+            <td>{{i.student_place}}</td>
+            <td><a href="{% url 'edit' %}?edit={{i.student_id}}" class="btn text-dark btn-outline-secondary">edit</a>
+            </td>
+            <td><a href="{% url 'delete' %}?delete={{i.student_id}}"
+                    class="btn text-dark btn-outline-secondary">delete</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

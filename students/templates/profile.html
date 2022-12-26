@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+Home{% endblock %}
+{% block content %}
+{% load static %}
+<div class="container mt-5 mb-5">
+
+  <div style="margin-left: 10%; margin-top: 2%; margin-bottom: 5%;">
+    <h1 style="color: tomato;">My Profile</h1>
+    <hr style="border: .5px solid black; margin-right: 60%; ">
+</div>
+    {% csrf_token %} {% for i in customer %}
+    <form action=""  method="POST" style="width: 80%; margin-left: 90px;">
+        <div class="input-group input-group-sm mb-3 ">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm" style="width: 150px;">Name</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="name" placeholder="{{i.name}}">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm" style="width: 150px;">Email</span>
+            </div>
+
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="email" placeholder="{{i.email}}">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm" style="width: 150px;">Phone Number</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="phno" placeholder="{{i.phno}}">
+          </div>
+          <div class="button" style="display: flex; justify-content: end; margin-top: 30px;">
+            <button type="submit" value="edit" class="btn btn-outline-dark"> <a href="{% url 'editprofile' %}" style="text-decoration: none; color: black;">Edit Profile</a> </button>
+          </div>
+    </form>
+    {% endfor %}
+</div>
+{% endblock %}

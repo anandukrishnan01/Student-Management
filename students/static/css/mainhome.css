@@ -1,0 +1,20 @@
+.wrapper {
+    margin: 30px auto;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: rgb(156, 161, 161);
+}
+.counter {
+    padding: 20px 11px;
+    border-radius: 0;
+    width: 100%;
+}
+.col-xs-6 {
+    width: 50%;
+}
+.col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    float: left;
+}
+
+

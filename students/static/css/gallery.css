@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    ;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    flex: 33.33%;
+    padding: 55px;
+    overflow: hidden;
+}
+.column  img{
+    transition: all .6s ease;
+} 
+.column:hover img{
+    transform: scale(1.4);
+}

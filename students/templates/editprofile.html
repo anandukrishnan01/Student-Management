@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+editprofile{% endblock %}
+{% block content %}
+{% load static %}
+<div class="container mt-5 mb-5">
+
+  <div style="margin-left: 10%; margin-top: 2%; margin-bottom: 5%;">
+    <h1 style="color: tomato;">Edit Profile</h1>
+    <hr style="border: .5px solid black; margin-right: 60%; ">
+</div>
+    <form action=""  method="POST" style="width: 80%; margin-left: 90px;">
+      {% for message in messages %}
+      <h5 class="text-center text-danger mb-4">{{message}}</h5>
+      {% endfor %}
+     {% csrf_token %} {% for i in forms %}
+        <div class="input-group input-group-sm mb-3 ">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm" style="width: 150px;">Name</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="name" placeholder="{{i.name}}">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm" style="width: 150px;">Email</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="email" placeholder="{{i.email}}">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm" style="width: 150px;">Password</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"  name="password" placeholder="{{i.password}}">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm" style="width: 150px;">Phone Number</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="phno" placeholder="{{i.phno}}">
+          </div>
+          <div class="button" style="display: flex; justify-content: end; margin-right: 133px; margin-top: 30px;">
+            <button type="submit" class="btn btn-outline-dark"> edit  </button>
+          </div>
+          {% endfor %}
+    </form>
+    
+</div>
+{% endblock %}

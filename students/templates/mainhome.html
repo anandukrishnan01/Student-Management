@@ -1,0 +1,91 @@
+
+{% extends 'mainbase.html' %}
+{% block title %}
+Christcollege,Irinjalakuda{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/mainhome.css'%}">
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static '/images/christ1.jpg'%}" class="d-block w-100"height=500vh alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/images/christ2.jpg'%}" class="d-block w-100 "height=500vh alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/images/christ3.jpg'%}" class="d-block w-100 "height=500vh alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/images/christ4.jpg'%}" class="d-block w-100"height=500vh alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/images/christ5.jpg'%}" class="d-block w-100"height=500vh alt="...">
+      </div>
+    </div>
+  </div>
+  <div class="container" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-bottom: 4%; margin-top: 6%; ">
+    <h5>Christ College was started in 1956, by the Devamatha Province of the Carmelites of Mary Immaculate (CMI), an indigenous religious congregation founded in 1831 by St. Kuriakose Elias Chavara. a religious priest and versatile genius, who envisioned education as a tool for liberation and development. Syro Malabar Catholic Church college run by Carmelites of Mary Immaculate (CMI) in Irinjalakuda of Thrissur District, Kerala, India. Christ College is affiliated to The University of Calicut. It has become the first college in Thrissur district to be accredited with an "A++" Grade certificate by the National Assessment and Accreditation Council (NAAC). The college conducts several undergraduate and postgraduate courses in arts, commerce, and science faculties. Besides, the college offers professional courses like PG diploma in natural disaster management; Bachelor of Physical Education (BPEd), and some UGC sponsored short-term courses. The College has 4800+ Students and 200+ Faculties. There are 53 Ug & Pg Programs and 4 Research Centres in the College.</h5>
+  </div>
+  <div class="wrapper">
+    <div class="col-lg-3 col-sm-6 col-xs-6 text-center ">
+      <div class="counter col_fourth">
+        <div class="col-sm-4">
+          <h1 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;"><i class="bi bi-mortarboard-fill"></i></h1>
+        </div>
+        <div class="col-sm-8 no-pad">
+          <h2 class="timer count-title count-number wow fadeInDown" data-to="4000" data-speed="1500" style="visibility: visible; animation-name: fadeInDown; font-size: 45px; margin-left: 14%;">4,000 + </h2>
+          
+          <p class="count-text wow fadeInDown" style="visibility: visible; animation-name: fadeInDown; font-size: 22px;"  >Students</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-xs-6 text-center">
+      <div class="counter col_fourth">
+        <div class="col-sm-4">
+          <h1 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;"><i class="bi bi-people-fill"></i></h1>
+        </div>
+        <div class="col-sm-8 no-pad">
+          <h2 class="timer count-title count-number wow fadeInDown" data-to="200" data-speed="1500" style="visibility: visible; animation-name: fadeInDown; font-size: 45px;">200 +</h2>
+          
+          <p class="count-text wow fadeInDown" style="visibility: visible; animation-name: fadeInDown; font-size: 22px;">Faculty</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-xs-6 text-center">
+      <div class="counter col_fourth">
+        <div class="col-sm-4">
+          <h1 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;"><i class="bi bi-x-diamond-fill"></i></h1>
+        </div>
+        <div class="col-sm-8 no-pad">
+          <h2 class="timer count-title count-number wow fadeInDown" data-to="53" data-speed="1500" style="visibility: visible; animation-name: fadeInDown; font-size: 45px;">53</h2>
+          <p class="count-text wow fadeInDown" style="visibility: visible; animation-name: fadeInDown; font-size: 22px;">Programmes</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-xs-6 text-center">
+      <div class="counter col_fourth end">
+        <div class="col-sm-4">
+          <h1 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;"><i class="bi bi-trophy-fill" ></i></h1>
+          
+        </div>
+        <div class="col-sm-8 no-pad">
+          <h2 class="timer count-title count-number wow fadeInDown" data-to="6" data-speed="1500" style="visibility: visible; animation-name: fadeInDown; font-size: 45px;">6</h2>
+          <p class="count-text wow fadeInDown" style="visibility: visible; animation-name: fadeInDown; font-size: 22px;">Research Centres</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="margin: 10%;"></p>
+  <div class="fixed-bottom">
+    <marquee  behavior="" direction="left" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: bisque; color: black;">Placement Training: Talentus Young Professional training for S3 students of ME, CE, EEE departments scheduled on 27th & 28th September 2022.    | We have secured the 5th Position on the Academic Performance Index Published by the University for Batch 2018-2022.    
+    </marquee>
+  </div>
+{% endblock %}

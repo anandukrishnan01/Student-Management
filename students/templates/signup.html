@@ -1,0 +1,39 @@
+
+{% extends 'mainbase.html' %}
+{% block title %}
+Home{% endblock %}
+{% block content %}
+{% load static %}
+  
+    <link rel="stylesheet" href="{% static '/css/signupp.css'%}">
+    <div class="outer">
+        
+        <div class="signup-box">
+            <h2>Signup</h2>
+            <div class="px">
+                <p id="text"></p>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+
+                <div>{% for message in messages %}
+                    <h3>{{message}}</h3>{% endfor %}</div>
+                <label for="">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter name" onchange="validname()" required>
+                <label for="">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" onchange="validemail()">
+                <label for="">Phone number</label>
+                <input type="number" id="ph" name="phno" placeholder="Enter phonenumber" onchange="validphone()">
+                <label for="">Password</label>
+                <input type="password" id="pass1" name="pass1" placeholder="Enter password"  onchange="validpassword()">
+                <label for="">Conform Password</label>
+                <input type="password" id="pass2" name="pass2" placeholder=" Re-enter password"  onchange="validpassconform()">
+                <input type="submit" name="" id="signup" value="Signup" style="background-color: #49c1a2; width: 300px;height: 30px; margin-top: 10px; border: none; color: white; font-size: 18px;">
+                <p>already have an account?<a class="text-primary" href="{% url 'signin' %}">login here</a></p>
+
+            </form>
+            
+        </div>
+    </div>
+    <script src="{% static 'js/signup.js' %}"></script>
+    {% endblock %} 

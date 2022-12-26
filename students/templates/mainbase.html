@@ -1,0 +1,162 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static '/css/mainbase.css'%}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- <style>
+    a:hover {
+      color: rgb(104, 102, 102) !important;
+    }
+  </style> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <!-- start mainheader   -->
+    <div class="container clearfix">
+
+      <div class="top-head">
+        <span class="left-top">
+          <i class="bi bi-telephone text-white"></i>
+          <a href="tel:+6563052414" style="text-decoration: none; color:white;">91 495 2761749</a>
+        </span>
+        <span class="left-top ml-3">
+          <i class="bi bi-telephone text-white"></i>
+          <a href="tel:+6563052414" style="text-decoration: none; color:white;">8281316060</a>
+        </span>
+        <span class="left-top ml-3">
+          <i class="bi bi-envelope text-white"></i>
+          <a href="mailto: christcollege@gmail.com" style="text-decoration: none; color:white;">christcollege@gmail.com</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"  style="margin-left: -5%; font-size: 12px;">
+      <ul class="navbar-nav ">
+        <li class="nav-item text-white">
+          <a class="nav-link text-white extra" href="{% url 'library' %}">LIBRARY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white extra" href="">ALUMINI</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white extra" href="">CALICUT UNIVERSITY</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            LOGIN
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-dark" href="{% url 'signin' %}">signin</a>
+            <a class="dropdown-item text-dark" href="{% url 'signup' %}">signup</a>
+            
+            
+          </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+  <!-- As a heading -->
+  <nav class="navbar navbar-light bg-light justify-content-center ">
+    <div class="mb-3 mt-3">
+      <a href="{% url 'mainhome' %}">
+        <img src="{% static '/images/christlogo.png'%}" alt="">
+      </a>
+    </div>
+    <span class="navbar-brand mb-4 mt-4 h1"></span>
+  </nav>
+  
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 0%; ">
+          <ul class="navbar-nav ">
+            <li class="nav-item text-white">
+              <a class="nav-link text-white extra" href="{% url 'mainhome' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white extra" href="{% url 'course' %}">courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white extra" href="{% url 'gallery' %}">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white extra" href="{% url 'contact' %}">contact us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+  {% block content %}{% endblock %}
+  <div class="bg-dark container-fluid d-flex  justify-content-end mt-5" style="font-family: 'Source Sans Pro', sans-serif;">
+    <div class="container w-25 mr-5">
+     <a class="navbar-brand" href="#"><img src="{% static '/images/christlogo.png'%}" height="100vh" style="margin-left:10%;margin-top: 10%;"></a>
+    </div>
+    <div class=" container d-flex ml-5 ">
+     <div class="container w-25 mr-5 text-light mt-5" style="margin-left: 20%;">
+       <h4 style="font-size: 18px;">CONTACT US</h4><hr class="text-warning" style="height: 3px;">
+       <h4 style="font-size: 12px;">Christ College (Autonomous), Irinjalakuda</h4>
+       <h4 style="font-size: 12px;">Irinjalakuda,Thrissure</h4>
+       <h4 style="font-size: 12px;">Kerala,India 673000</h4>
+       <h4 style="font-size: 12px;"></h4>
+       <h4 style="font-size: 12px;">Phone : 04952355901</h4>
+       <h4 style="font-size: 12px;">Fax : 04952355901</h4>
+       <h4 style="font-size: 12px;">E - mail : christedu@yahoo.co.in,<br> principal@christcollege.org</h4>
+       <h4 style="font-size: 12px;">Website :https://christcollegeijk.edu.in/</h4>
+     </div>
+     <div class="container ml-5 text-light mt-5 ">
+       <h4 style="font-size: 18px;">USEFULL LINKS</h4><hr class="text-warning" style="height: 3px;margin-right: 70%;">
+       <h4 style="font-size: 12px;">Devagiri Journal of Science</h4>
+       <h4 style="font-size: 12px;">University of Calicut</h4>
+       <h4 style="font-size: 12px;">National Assessment and Accreditation Council</h4>          
+     </div>
+    </div>
+   </div>
+
+<!-- footer -->
+  <section class=" " >
+    <footer class="pt-2 pb-2   bg-light text-dark">
+      <div class="container">
+        <div class="col-sm-4 text-center">© 2021 Christ College Irinjalakuda Since 1956</div> 
+        <div class="col-sm-22  " >        <h6 style="display: flex; justify-content: flex-end; margin-top: -2%; margin-bottom: 40px;">Website Powered by iDynasite from INI Technologies Pvt Ltd, India</h6>
+        </div>
+        
+                       
+
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="" async defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
